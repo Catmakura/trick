@@ -1,0 +1,45 @@
+img.pic {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    width: 260px;
+    height: 200px;
+    background-color: black;
+}
+
+p.text {
+    color: white;
+    font-size: 26px;
+    position: absolute;
+    top: -10px;
+    left: 24px;
+
+.app {
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    color: black;
+    background-color: #516e41;
+    border-radius: 20px;
+    width: 300px;
+    height: 350px;
+}
+
+.sidebutton-container {
+    display: flex;
+    gap: 15px;
+    text-align: center;
+}
+
+.sidebutton {
+    position: relative;
+    top: 285px;
+    left: 20px;
+    width: 115px;
+    height: 30px;
+    backdrop-filter: blur(15px) saturate(1.2);
+    background-color: aquamarine;
+    line-height: 30px;
+    padding: 5px;
+    border-radius: 20px;
+}

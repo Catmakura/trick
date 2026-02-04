@@ -1,0 +1,150 @@
+<!--
++ ================== +
+|       Trick        |
++ ~~~~~~~~~~~~~~~~~~ +
+|   Ja-Jp    v1 beta |
+|  release  26/01/23 |
+|   nekomakura@2025  |
++ ================== +
+----  =========================================================================== -->
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+<meta charset="UTF-8">
+<title>MainPage - Trick</title>
+<link rel="icon" href="../icon-main.png" type="image/x-icon">
+<!--  =========================================================================== -->
+  <link rel="stylesheet" href="../css/poppop.css">
+  <link rel="stylesheet" href="../css/menubar.css">
+  <link rel="stylesheet" href="../css/containa.css">
+<!--  =========================================================================== -->
+<style>
+.menu-item {
+font-family: 'azuki';
+}
+.app {
+font-family: 'azuki';
+}
+@font-face {/*SuperType for Trick*/
+  font-family: "SuperType";
+  src: url("../fonts/supertype.ttf")format('ttf');
+}
+@font-face {
+  font-family: "azuki";
+  src: url("../fonts/azuki.ttf");
+}
+@font-face {
+  font-family: "aoharu";
+  src: url("../fonts/aoharu-marker-mini.ttf")format('ttf');
+}
+@font-face {
+  font-family: "pencil-kaisho";
+  src: url("../fonts/pencil-kaisyo.ttf")format('ttf');
+}
+</style>
+</head>
+<body>
+<!--  =========================================================================== -->
+<!-- メニューバー -->
+<div class="menubar">
+<!-- アイコン -->
+    <div class="icon-btn" onclick="ModalLib.showModal('aboutModal')" title="情報">
+        <img src="../icon-main.png" alt="Trick">
+        <div class="battery-dropdown">
+        <div id="batteryStatus">取得中...</div>
+        <div id="batteryLevel">取得中...</div>
+    </div>
+</div>
+<!-- ファイル -->
+    <div class="menu-item">ファイル
+        <div class="dropdown">
+            <div onclick="open()">開く</div>
+            <div onclick="openNew()">ディスクから開く</div>
+            <div onclick="createNew()">新規作成</div>
+            <div onclick="save()">rawでディスクに保存</div>
+            <div onclick="saveNew()" class="undervar">...でディスクに保存</div>
+            <div onclick="print()">印刷</div>
+        </div>
+    </div>
+<!-- 編集 -->
+    <div class="menu-item">編集
+        <div class="dropdown">
+            <div onclick="undo()">元に戻す</div>
+            <div onclick="redo()" class="undervar">やり直し</div>
+            <div onclick="Copy()">コピー</div>
+            <div onclick="Paste()">ペースト</div>
+            <div onclick="Cut()">カット</div>
+            <div onclick="SelectAll()" class="undervar">全選択</div>
+            <div onclick="Showclipboard()">クリップボード一覧を表示</div>
+
+
+
+
+        </div>
+    </div>
+<!-- ツール -->
+    <div class="menu-item">ツール
+        <div class="dropdown">
+            <div onclick="word()" class="undervar">単語帳</div>
+            <div onclick="addon()">アドオン</div>
+        </div>
+    </div>
+<!-- ヘルプ -->
+    <div class="menu-item">ヘルプ
+        <div class="dropdown">
+            <div onclick="window.location.href='Page404.html';" class="undervar">Trickのヘルプを見る</div>
+            <div onclick="window.location.href='Page404.html';">開発者にフィードバックを送る</div>
+        </div>
+    </div>
+<!-- 時計 -->
+    <div id="clock">読み込み中...</div>
+</div>
+<!--  =========================================================================== -->
+<div class="app" onclick="window.open('v7supertype.html?act=start', '_blank');">
+<p class="text">super typer v7</p>
+<img src="../icon-main.png" alt="editor-picture" class="pic">
+<div class="sidebutton-container">
+<div class="sidebutton" onclick="window.open('v7supertype.html?act=openf', '_blank');">ファイルを開く</div>
+<div class="sidebutton" onclick="window.open('v7supertype.html?act=createnewf', '_blank');">新規作成</div>
+</div>
+</div>
+<!--  =========================================================================== -->
+<!-- モーダルウィンドウ -->
+<div class="modal" id="aboutModal">
+        <div class="modal-content">
+        <div class="modalpicture">
+            <img src="../icon-main.png" alt="icon">
+        <div class="modal-header">Trick v1</div>
+        </div>
+        <div class="modal-body">
+            <p>ツールパック(オフライン版)</p>
+            <p>■ インストール済みアプリ</p>
+            <ul>
+                <li>Super Typer - text editor</li>
+                <li>Flows - mp4 player</li>
+                <li>Core Minds - mind map maker</li>
+                <li>Dreams - 3D CG&Animator</li>
+                <li>Chrome/firefox　向け</li>
+　　　　　　　　<li>API連携によるデバイス管理(注)</li>
+                <li>google連携機能(まだ)</li>
+                <li>詳しくは同ファイル内</li>
+            </ul>
+            <p>ご利用ありがとうございます。</p>
+            <p>© 2025 name</p>
+        </div>
+        <div class="modal-footer">
+            <button class="close-btn" id="closeBtn">閉じる</button>
+        </div>
+    </div>
+</div>
+<!--  =========================================================================== -->
+<script src="../js/poppop.js"></script> <!-- 外部モーダルライブラリ -->
+<script src="../js/linker.js"></script> <!-- 外部モーダルライブラリ -->
+<!--  =========================================================================== -->
+<script>
+    // モーダル初期化
+    ModalLib.initModal('aboutModal', 'closeBtn');
+</script>
+
+</body>
+</html>

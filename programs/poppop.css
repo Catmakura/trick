@@ -1,0 +1,72 @@
+
+.notification-modal {
+    position: fixed;
+    top: 2%;               /* 上から20% */
+    left: 50%;
+    transform: translateX(-50%);  /* 横中央 */
+    background: #fff8dc;    /* クリーム色 */
+    color: #333;
+    padding: 24px 48px;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.notification-modal.show {
+    opacity: 1;
+}
+
+.notification-icon {
+    width: 48px;
+    height: 48px;
+}
+
+
+.notification-text {
+    display: inline-block;
+}
+
+
+/* ===== モーダル ===== */
+.modal { display: none; position: fixed; inset: 0; justify-content: center; align-items: center; z-index: 1000; }
+.modal.show { display: flex; }
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.15);
+    animation: modalFadeIn 0.2s ease-out;
+}
+.modal-header {font-size: 20px;font-weight: bold;display: flex;}
+.modal-body { font-size: 14px; line-height: 1.6; }
+.modal-footer { margin-top: 20px; text-align: right; }
+.close-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.modalpicture img {
+    width: 28px;
+    height: 28px;
+    padding: 0px 10px 0px 0px;
+    }
+.close-btn:hover { background-color: #0056b3; }
+@keyframes modalFadeIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+.modalpicture {
+    display: flex;
+}

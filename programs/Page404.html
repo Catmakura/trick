@@ -1,0 +1,57 @@
+<title>Oops! - Trick</title>
+<link rel="icon" href="icon-main.png" type="image/x-icon">
+<!--  =========================================================================== -->
+<link rel="stylesheet" href="top.css">
+<!--  =========================================================================== -->
+<style>
+.menubar {
+    height: 15px;
+    background: #fff;
+    border-bottom: 1px solid #dadce0;
+    padding: 6px 15px;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    align-items: center;
+}
+.icon-btn {
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 4px;
+}
+.icon-btn img {
+    width: 20px;
+    height: 20px;
+}
+</style>
+<!--  =========================================================================== -->
+<img id="wallpaper" src="wallpaper" alt="wallpaper" />
+<!--  =========================================================================== -->
+<div class="menubar">
+<div class="icon-btn" title="情報">
+<img src="icon-main.png" alt="icon">
+</div>
+</div>
+<!--  =========================================================================== -->
+<div class="container">
+<div class="card"><h1>おっと!</h1>
+<p>なにか問題が起こったようだ。<br>このページは工事中です。</p>
+<button class="button", onclick="window.location.href='mainpage.html';">ホームに戻る</button>
+</div>
+</div>
+<!--  =========================================================================== -->
+<div class="container">
+<div class="contents">
+<h1>Trick</h1>
+<h5>↓Github Page↓</h5>
+<button class="link", onclick="window.location.href='https://github.com/Catmakura/trick';">github.com/Catmakura/trick</button>
+<h5>↓Help↓</h5>
+<button class="link",onclick="window.location.href='https://Catmakura.github.io/trick/help.html/';">Catmakura.github.io/trick/help.html/</button>
+<h5>©️ 2025 Nekomakura</h5>
+<button class="contact", onclick="window.location.href='https://github.com/Catmakura/';">contact us</button>
+</div>
+<!--  =========================================================================== -->
+<script>function updateImage() {const now = new Date();const seconds = now.getSeconds();const img = document.getElementById("wallpaper");img.src = `wallpaper/${seconds}.jpg`;}updateImage();</script>
