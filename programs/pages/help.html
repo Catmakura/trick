@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>help - trick</title>
+    <style>
+        /* 全体のスタイル設定 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+        /* ヘッダー */
+header {
+    background-color: #0061F2;
+    color: white;
+    padding: 42px;
+    text-align: center;
+    height: 60px;
+}
+
+        header h1 {
+            margin: 0;
+        }
+
+nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 27px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 15px;
+    font-size: 1em;
+}
+
+        nav a:hover {
+            background-color: #333;
+            border-radius: 4px;
+        }
+
+        /* サイドバー */
+.sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    background-color: #2f2f2f;
+    color: white;
+    padding: 140px 20px 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+        .sidebar h2 {
+            margin-top: 0;
+            color: #ffffff;
+            font-size: 1.5em;
+        }
+
+        .sidebar ul {
+            padding-left: 20px;
+            list-style-type: none;
+            margin-top: 20px;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .sidebar ul li a:hover {
+            color: #007bff;
+        }
+
+        /* アクティブなリンクのスタイル */
+        .sidebar ul li a.active {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        /* メインコンテンツエリア */
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+            background-color: white;
+            min-height: 100vh;
+            margin-top: 60px; /* メニューバー分のスペースを確保 */
+        }
+
+        .content h2 {
+            color: #0061F2;
+            font-size: 2em;
+        }
+
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .content ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        /* 非表示状態のセクション */
+        .hidden {
+            display: none;
+        }
+
+        /* 画像のスタイル */
+        .content img {
+            max-width: 100%; /* 画像が横幅に収まるように */
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px; /* 画像の角を丸く */
+        }
+
+        /* フッター */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+                top: 0;
+            }
+
+            nav {
+                display: block;
+            }
+
+            nav a {
+                display: block;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <h1>trick help</h1>
+        <p>trickの使い方や使用などを載せています。</p>
+    </header>
+
+    <!-- メニューバー -->
+    <nav>
+        <a href="javascript:void(0)" onclick="toggleSection('section1', 'はじめに')">はじめに</a>
+        <a href="javascript:void(0)" onclick="toggleSection('section2', '基本的な使い方')">基本的な使い方</a>
+        <a href="javascript:void(0)" onclick="toggleSection('section3', 'トラブルシューティング')">トラブルシューティング</a>
+        <a href="javascript:void(0)" onclick="toggleSection('section4', 'FAQ')">FAQ</a>
+    </nav>
+
+    <!-- サイドバー -->
+    <div class="sidebar">
+        <h2>目次</h2>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="toggleSection('section1', 'はじめに')">はじめに</a></li>
+            <li><a href="javascript:void(0)" onclick="toggleSection('section2', '基本的な使い方')">基本的な使い方</a></li>
+            <li><a href="javascript:void(0)" onclick="toggleSection('section3', 'トラブルシューティング')">トラブルシューティング</a></li>
+            <li><a href="javascript:void(0)" onclick="toggleSection('section4', 'FAQ')">FAQ</a></li>
+        </ul>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <div class="content">
+        <section id="section1">
+            <h2>はじめに</h2>
+            <p>このドキュメントでは、設定や使い方について説明します。</p>
+            <img src="https://via.placeholder.com/600x300" alt="説明画像">
+            <p>この画像はサンプルの画像です。画像の下に追加情報を記載できます。</p>
+        </section>
+
+        <section id="section2" class="hidden">
+            <h2>基本的な使い方</h2>
+            <p>使用するための基本的な手順は以下の通りです。</p>
+            <ul>
+                <li>デバイスを電源に接続します。</li>
+                <li>デバイスのインターフェースを使って操作を始めます。</li>
+                <li>アプリケーションやツールをインストールして機能を拡張します。</li>
+            </ul>
+            <img src="https://via.placeholder.com/600x300" alt="デバイスの使い方">
+        </section>
+
+        <section id="section3" class="hidden">
+            <h2>トラブルシューティング</h2>
+            <p>使用中に問題が発生した場合、次の手順で解決できます。</p>
+            <ul>
+                <li>デバイスが起動しない場合、電源ケーブルを確認してください。</li>
+                <li>ソフトウェアが動作しない場合、最新のバージョンに更新してください。</li>
+                <li>その他の問題については、サポートチームに連絡してください。</li>
+            </ul>
+            <img src="https://via.placeholder.com/600x300" alt="トラブルシューティング画像">
+        </section>
+
+        <section id="section4" class="hidden">
+            <h2>FAQ</h2>
+            <p><strong>Q1: PCと接続する方法は？</strong></p>
+            <p>PCとの接続は、USBケーブルを使用して行います。</p>
+            <p><strong>Q2: ソフトウェアの更新はどうすれば良いですか？</strong></p>
+            <p>メニューから「ソフトウェア更新」を選んでください。</p>
+        </section>
+    </div>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2026 Nekomakura</p>
+    </footer>
+
+    <script>
+        // セクションを表示/非表示にする関数
+        function toggleSection(sectionId, sectionTitle) {
+            // すべてのセクションを非表示にする
+            const sections = document.querySelectorAll('.content section');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // クリックされたセクションだけを表示する
+            const section = document.getElementById(sectionId);
+            section.classList.remove('hidden');
+
+            // ページタイトルを更新
+            document.title = `help/${sectionTitle} - trick`;
+
+            // 目次のリンクをアクティブにする
+            const links = document.querySelectorAll('.sidebar ul li a');
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+            const activeLink = document.querySelector(`.sidebar ul li a[href="javascript:void(0)"][onclick="toggleSection('${sectionId}', '${sectionTitle}')"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+
+            // ページトップにスクロール
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+</html>
