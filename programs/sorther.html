@@ -1,0 +1,71 @@
+<title>automatic transition page</title>
+    <script>
+        // getQueryParamFunc
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        //PageOnloadProcessFunc
+        window.onload = function() {
+            const page = getQueryParam('page');  // get'page'param
+            
+            let urlToOpen;
+
+            // Change URL from'page'
+            if (page === "top") {
+                urlToOpen = "../top.html";
+            } else if (page === "termsofservice") {
+                urlToOpen = "pages/terms_of_service.html";
+//jp
+            } else if (page === "mainpage") {
+                urlToOpen = "pages/mainpage.html";
+            } else if (page === "help") {
+                urlToOpen = "pages/help.html";
+            } else if (page === "github") {
+                urlToOpen = "https://github.com/Catmakura/trick";
+            } else if (page === "contact-us") {
+                urlToOpen = "https://github.com/Catmakura/";
+            } else if (page === "profile") {
+                urlToOpen = "pages/nekomakura.html";
+            } else if (page === "supertype") {
+                urlToOpen = "pages/v7supertype.html";
+//en
+            } else if (page === "en_top") {
+                urlToOpen = "pages/en_top.html";
+            } else if (page === "en_mainpage") {
+                urlToOpen = "pages/en_mainpage.html";
+            } else if (page === "en_help") {
+                urlToOpen = "pages/en_help.html";
+            } else if (page === "en_github") {
+                urlToOpen = "https://github.com/Catmakura/trick";
+            } else if (page === "en_contact-us") {
+                urlToOpen = "https://github.com/Catmakura/";
+            } else if (page === "en_profile") {
+                urlToOpen = "pages/catmakura.html";
+            } else if (page === "en_supertype") {
+                urlToOpen = "pages/v7_supertype_en.html";
+//zh
+            } else if (page === "zh_top") {
+                urlToOpen = "pages/zh_top.html";
+            } else if (page === "zh_mainpage") {
+                urlToOpen = "pages/zh_mainpage.html";
+            } else if (page === "zh_help") {
+                urlToOpen = "pages/zh_help.html";
+            } else if (page === "zh_github") {
+                urlToOpen = "https://github.com/Catmakura/trick";
+            } else if (page === "zh_contact-us") {
+                urlToOpen = "https://github.com/Catmakura/";
+            } else if (page === "zh_profile") {
+                urlToOpen = "pages/maomakura.html";
+            } else if (page === "zh_supertype") {
+                urlToOpen = "pages/v7_supertype_zh.html";
+//other
+            } else {
+                urlToOpen = "pages/Page404.html?page=404";  // defalt URL
+            }
+
+            // openURL
+            window.location.replace(urlToOpen);
+        }
+</script>
