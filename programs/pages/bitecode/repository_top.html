@@ -216,6 +216,23 @@ body{
   height:100%;
   background:#e34c26;
 }
+
+.repolink {
+  color: black;           /* 通常時 */
+  text-decoration: none;  /* 下線を消したい場合 */
+}
+
+.repolink:visited {
+  color: black;           /* クリック後（訪問済み） */
+}
+
+.repolink:hover {
+  color: black;           /* マウスを乗せたとき */
+}
+
+.repolink:active {
+  color: black;           /* クリックしている瞬間 */
+}
 </style>
 </head>
 
@@ -257,7 +274,7 @@ body{
 
     <div class="file-list">
       <div class="file">
-        <div class="filename"><a href="https://www.google.com">📁 programs</a></div>
+        <div class="filename"><a href="https://www.google.com" class="repolink">📁 programs</a></div>
         <div>no deta</div>
       </div>
       <div class="file">
