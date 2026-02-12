@@ -134,7 +134,22 @@ body{
 .file{
   color:#24292f;
 }
+.repolink {
+  color: black;           /* 通常時 */
+  text-decoration: none;  /* 下線を消したい場合 */
+}
 
+.repolink:visited {
+  color: black;           /* クリック後（訪問済み） */
+}
+
+.repolink:hover {
+  color: blue;           /* マウスを乗せたとき */
+}
+
+.repolink:active {
+  color: blue;           /* クリックしている瞬間 */
+}
 </style>
 </head>
 
