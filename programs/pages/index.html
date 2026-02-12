@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>GitHub Style Profile</title>
+
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  background:#f6f8fa;
+  color:#24292f;
+  font-size:14px;
+}
+
+/* ===== Topbar ===== */
+.topbar{
+  background:#ffffff;
+  border-bottom:1px solid #d0d7de;
+  display:flex;
+  align-items:center;
+  padding:12px 24px;
+  gap:16px;
+}
+
+.logo{
+  font-weight:600;
+  font-size:16px;
+}
+
+.topname{
+  font-weight:600;
+}
+
+/* ===== Tabs ===== */
+.tabs{
+  display:flex;
+  gap:24px;
+  padding:0 40px;
+  border-bottom:1px solid #d0d7de;
+  background:#fff;
+}
+
+.tabs a{
+  padding:14px 0;
+  text-decoration:none;
+  color:#57606a;
+}
+
+.tabs a.active{
+  color:#24292f;
+  border-bottom:2px solid #fd8c73;
+  font-weight:600;
+}
+
+/* ===== Layout ===== */
+.container{
+  max-width:1280px;
+  margin:24px auto;
+  display:flex;
+  gap:32px;
+  padding:0 24px;
+}
+
+/* ===== Profile ===== */
+.profile{
+  width:296px;
+}
+
+.avatar{
+  width:100%;
+  border-radius:50%;
+  border:1px solid #d0d7de;
+}
+
+.profile h2{
+  margin:16px 0 4px;
+  font-size:24px;
+}
+
+.subname{
+  color:#57606a;
+  margin-bottom:16px;
+}
+
+.edit-btn{
+  width:100%;
+  padding:6px 12px;
+  border:1px solid #d0d7de;
+  background:#f6f8fa;
+  border-radius:6px;
+  cursor:pointer;
+  margin-bottom:16px;
+  font-weight:500;
+}
+
+.edit-btn:hover{
+  background:#eaeef2;
+}
+
+.profile a{
+  display:block;
+  color:#0969da;
+  text-decoration:none;
+  margin-bottom:8px;
+}
+
+.profile a:hover{
+  text-decoration:underline;
+}
+
+/* ===== Content ===== */
+.content{
+  flex:1;
+}
+
+/* README Card */
+.readme{
+  background:#fff;
+  border:1px solid #d0d7de;
+  border-radius:6px;
+  padding:24px;
+  margin-bottom:32px;
+}
+
+.readme h3{
+  margin-top:0;
+  font-size:20px;
+}
+
+/* Popular repos */
+.section-title{
+  font-weight:600;
+  margin-bottom:16px;
+}
+
+.repo-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.repo{
+  background:#fff;
+  border:1px solid #d0d7de;
+  border-radius:6px;
+  padding:16px;
+  transition:background 0.15s ease;
+}
+
+.repo:hover{
+  background:#f6f8fa;
+}
+
+.repo h4{
+  margin:0 0 6px;
+  color:#0969da;
+  font-size:16px;
+}
+
+.repo p{
+  margin:0 0 12px;
+  color:#57606a;
+  font-size:13px;
+}
+
+/* Language dot */
+.lang{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:12px;
+  color:#57606a;
+}
+
+.dot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#e34c26;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .container{
+    flex-direction:column;
+  }
+  .repo-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="logo">GitHub</div>
+  <div class="topname">Name</div>
+</div>
+
+<div class="tabs">
+  <a class="active">Overview</a>
+  <a>Repositories</a>
+  <a>Projects</a>
+  <a>Packages</a>
+  <a>Stars</a>
+</div>
+
+<div class="container">
+
+  <div class="profile">
+    <img src="../picture/pixelicon.png" class="avatar">
+    <h2>Name</h2>
+    <div class="subname">Name</div>
+
+    <button class="edit-btn">Edit profile</button>
+
+    <a href="#">🔗 https://example.com</a>
+  </div>
+
+  <div class="content">
+
+    <div class="readme">
+      <h3>Hi there 👋</h3>
+      <p>
+        Welcome to my GitHub profile.<br><br>
+        I love building web applications and learning new technologies.
+      </p>
+    </div>
+
+    <div class="section-title">Popular repositories</div>
+
+    <div class="repo-grid">
+
+      <div class="repo">
+        <h4>example</h4>
+        <p>HTML project</p>
+        <div class="lang">
+          <div class="dot"></div> HTML
+        </div>
+      </div>
+
+      <div class="repo">
+        <h4>example</h4>
+        <p>Another sample repo</p>
+        <div class="lang">
+          <div class="dot"></div> CSS
+        </div>
+      </div>
+
+      <div class="repo">
+        <h4>project</h4>
+        <p>Sample project description</p>
+        <div class="lang">
+          <div class="dot"></div> JavaScript
+        </div>
+      </div>
+
+      <div class="repo">
+        <h4>demo</h4>
+        <p>Demo repository</p>
+        <div class="lang">
+          <div class="dot"></div> TypeScript
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
