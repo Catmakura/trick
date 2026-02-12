@@ -162,6 +162,39 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.repolink {
+  color: #3c64b4;           /* 通常時 */
+  text-decoration: none;  /* 下線を消したい場合 */
+}
+
+.repolink:visited {
+  color: #3c64b4;           /* クリック後（訪問済み） */
+}
+
+.repolink:hover {
+  color: #3c65b4;           /* マウスを乗せたとき */
+}
+
+.repolink:active {
+  color: #3c64b4;           /* クリックしている瞬間 */
+}
+
+.homelink {
+  color: black;           /* 通常時 */
+  text-decoration: none;  /* 下線を消したい場合 */
+}
+
+.homelink:visited {
+  color: black;           /* クリック後（訪問済み） */
+}
+
+.homelink:hover {
+  color: black;           /* マウスを乗せたとき */
+}
+
+.homelink:active {
+  color: black;           /* クリックしている瞬間 */
+}
 </style>
 </head>
 
@@ -171,7 +204,7 @@ body {
 <div class="topbar">
   <div class="menu">☰</div>
   <div class="logo">Bite code</div>
-  <div class="topname">Catmakura</div>
+  <div class="topname"><a href="bitecode/repository_project_top.html" class="homelink">Catmakura</a></div>
 </div>
 
 <!-- ===== タブ ===== -->
