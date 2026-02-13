@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>Secure GitHub Code Viewer</title>
+<title>Code Viewer</title>
 
 <style>
 body{
@@ -150,7 +150,6 @@ const downloadBtn = document.getElementById("downloadBtn");
 
 /* 🔐 ホワイトリストのみ */
 const allowedFiles = [
-  "sample.html",
   "index.html",
   "app.js",
   "style.css",
@@ -182,6 +181,9 @@ function loadFile(fileName){
       currentText = text;
       codeDisplay.textContent = text;
       generateLines(text);
+
+      // ✅ タイトル変更
+      document.title = fileName + " - Code Viewer";
     })
     .catch(() => {
       showError("File not found.");
@@ -194,6 +196,9 @@ function showError(message){
   lineCount.textContent = "0 lines";
   fileInfo.textContent = "";
   downloadBtn.disabled = true;
+
+  // タイトルも変更
+  document.title = "Code Viewer";
 }
 
 function generateLines(text){
