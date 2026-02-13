@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>source code - trick</title>
+   <!--bite code studio -->
+
+<style>
+/* =========================
+   Base
+========================= */
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  background:#f6f8fa;
+  color:#24292f;
+  font-size:14px;
+}
+
+/* =========================
+   Top Global Header
+========================= */
+.global-header{
+  background:#24292f;
+  color:#fff;
+  height:56px;
+  display:flex;
+  align-items:center;
+  padding:0 16px;
+}
+
+.global-header .logo{
+  font-weight:600;
+  margin-right:20px;
+}
+
+.search{
+  background:#30363d;
+  border:1px solid #444c56;
+  border-radius:6px;
+  padding:6px 12px;
+  color:#c9d1d9;
+  width:260px;
+  font-size:13px;
+}
+
+/* =========================
+   Repo Header
+========================= */
+.repo-header{
+  background:#fff;
+  border-bottom:1px solid #d0d7de;
+  padding:16px 24px;
+}
+
+.repo-path{
+  font-size:20px;
+  font-weight:600;
+}
+
+.badge{
+  margin-left:8px;
+  border:1px solid #d0d7de;
+  border-radius:20px;
+  padding:2px 8px;
+  font-size:12px;
+  color:#57606a;
+}
+
+/* =========================
+   Tabs
+========================= */
+.tabs{
+  display:flex;
+  gap:24px;
+  padding:0 24px;
+  background:#fff;
+  border-bottom:1px solid #d0d7de;
+}
+
+.tab{
+  padding:12px 0;
+  font-size:14px;
+  color:#57606a;
+  cursor:pointer;
+  position:relative;
+}
+
+.tab.active{
+  color:#24292f;
+  font-weight:600;
+}
+
+.tab.active::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:2px;
+  background:#fd8c73;
+}
+
+/* =========================
+   Main Layout
+========================= */
+.container{
+  display:flex;
+  gap:24px;
+  padding:24px;
+}
+
+.main{
+  flex:3;
+}
+
+.sidebar{
+  flex:1;
+}
+
+/* =========================
+   Branch Bar
+========================= */
+.branch-bar{
+  background:#fff;
+  border:1px solid #d0d7de;
+  border-radius:6px;
+  padding:8px 16px;
+  margin-bottom:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* =========================
+   File List
+========================= */
+.file-list{
+  background:#fff;
+  border:1px solid #d0d7de;
+  border-radius:6px;
+}
+
+.file{
+  padding:10px 16px;
+  border-bottom:1px solid #d8dee4;
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+}
+
+.file:last-child{
+  border-bottom:none;
+}
+
+.file:hover{
+  background:#f6f8fa;
+}
+
+.filename{
+  display:flex;
+  gap:8px;
+}
+
+/* =========================
+   README Box
+========================= */
+.readme{
+  background:#fff;
+  border:1px solid #d0d7de;
+  border-radius:6px;
+  margin-top:16px;
+}
+
+.readme-header{
+  padding:10px 16px;
+  border-bottom:1px solid #d8dee4;
+  font-weight:600;
+}
+
+.readme-body{
+  padding:16px;
+  color:#57606a;
+}
+
+/* =========================
+   Sidebar Boxes
+========================= */
+.box{
+  background:#fff;
+  border:1px solid #d0d7de;
+  border-radius:6px;
+  padding:16px;
+  margin-bottom:16px;
+  font-size:14px;
+}
+
+.box h3{
+  margin:0 0 8px 0;
+  font-size:14px;
+}
+
+/* =========================
+   Language Bar
+========================= */
+.lang-bar{
+  height:8px;
+  background:#eaeef2;
+  border-radius:6px;
+  overflow:hidden;
+  margin-top:8px;
+}
+
+.lang-fill{
+  width:100%;
+  height:100%;
+  background:#e34c26;
+}
+
+.repolink {
+  color: black;           /* 通常時 */
+  text-decoration: none;  /* 下線を消したい場合 */
+}
+
+.repolink:visited {
+  color: black;           /* クリック後（訪問済み） */
+}
+
+.repolink:hover {
+  color: #3c46b4;           /* マウスを乗せたとき */
+}
+
+.repolink:active {
+  color: #3c64b4;           /* クリックしている瞬間 */
+}
+</style>
+</head>
+
+<body>
+
+<div class="global-header">
+  <div class="logo">Bite code</div>
+   <!--
+  <input class="search" placeholder="Type / to search">
+   -->
+</div>
+
+<div class="repo-header">
+  <span class="repo-path"><a href="../profile.html" class="repolink">Catmakura</a>  /  <a href="repository_server_code_top.html" class="repolink">Server_code</a></span>
+  <span class="badge">Public</span>
+</div>
+
+<div class="tabs">
+  <div class="tab active">Code</div>
+  <div class="tab">Issues</div>
+  <div class="tab">Pull requests</div>
+  <div class="tab">Discussions</div>
+  <div class="tab">Actions</div>
+  <div class="tab">Projects</div>
+  <div class="tab">Wiki</div>
+  <div class="tab">Security</div>
+  <div class="tab">Insights</div>
+  <div class="tab">Settings</div>
+</div>
+
+<div class="container">
+
+  <div class="main">
+
+    <div class="branch-bar">
+      <div>main ・ 1 Branch ・ 0 Tags</div>
+      <div>10+ commits</div>
+    </div>
+
+    <div class="file-list">
+
+      <div class="file">
+        <div class="filename"><a href="editor.html?file=README_Server_code.md" class="repolink">📄 README.md</a></div>
+        <div>no deta</div>
+      </div>
+      <div class="file">
+        <div class="filename"><a href="editor.html?file=main_Server_code.py" class="repolink">📄 main.py</a></div>
+        <div>no deta</div>
+      </div>
+      <div class="file">
+        <div class="filename"><a href="editor.html?file=requirements_Server_code.txt" class="repolink">📄 requirements.txt</a></div>
+        <div>no deta</div>
+      </div>
+
+    </div>
+
+    <div class="readme">
+      <div class="readme-header">README</div>
+      <div class="readme-body">
+        <h1>Server_code</h1><br>
+        This repository is web server programm for trick system.<br>
+        Language:python 3
+        
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sidebar">
+
+    <div class="box">
+      <h3>About</h3>
+      <p>No description, website, or topics provided.</p>
+      <p><div class="readme-mark"><a href="editor.html?file=README_Server_code.md" class="repolink">📖 readme</a></div><br><div class="star-mark">⭐️ 1+ star</div><br><div class="watch-mark">👁 1+ watching</div><br><div class="forks-mark>🍴 0 forks</div></p>
+    </div> </div>
+
+    <div class="box">
+      <h3>Releases</h3>
+      <p>No releases published</p>
+    </div>
+
+    <div class="box">
+      <h3>Languages</h3>
+      <div class="lang-bar">
+        <div class="lang-fill"></div>
+      </div>
+      Markdown 100%
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
