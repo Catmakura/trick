@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>source code - trick</title>
+
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  background:#f6f8fa;
+  font-size:14px;
+  color:#24292f;
+}
+
+/* =========================
+   Top Header
+========================= */
+.global-header{
+  background:#24292f;
+  color:#fff;
+  height:56px;
+  display:flex;
+  align-items:center;
+  padding:0 16px;
+}
+
+.global-header .logo{
+  font-weight:600;
+  margin-right:20px;
+}
+
+/* =========================
+   Repo Top Bar
+========================= */
+.repo-bar{
+  background:#fff;
+  border-bottom:1px solid #d0d7de;
+  padding:12px 24px;
+}
+
+.repo-path{
+  font-weight:600;
+  font-size:16px;
+}
+
+.repo-sub{
+  color:#57606a;
+  font-size:13px;
+}
+
+/* =========================
+   Branch + Breadcrumb
+========================= */
+.breadcrumb-bar{
+  background:#fff;
+  border-bottom:1px solid #d0d7de;
+  padding:10px 24px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.branch{
+  border:1px solid #d0d7de;
+  padding:4px 10px;
+  border-radius:6px;
+  background:#f6f8fa;
+  font-size:13px;
+}
+
+.breadcrumb{
+  color:#57606a;
+}
+
+/* =========================
+   File Table
+========================= */
+.container{
+  padding:24px;
+}
+
+.file-table{
+  width:100%;
+  border:1px solid #d0d7de;
+  border-radius:6px;
+  border-collapse:collapse;
+  background:#fff;
+  overflow:hidden;
+}
+
+.file-table thead{
+  background:#f6f8fa;
+  text-align:left;
+  font-weight:600;
+  color:#57606a;
+  font-size:12px;
+}
+
+.file-table th,
+.file-table td{
+  padding:10px 16px;
+  border-bottom:1px solid #d8dee4;
+}
+
+.file-table tr:last-child td{
+  border-bottom:none;
+}
+
+.file-table tbody tr:hover{
+  background:#f6f8fa;
+}
+
+.name-col{
+  width:35%;
+}
+
+.commit-col{
+  width:45%;
+  color:#57606a;
+}
+
+.time-col{
+  width:20%;
+  text-align:right;
+  color:#57606a;
+}
+
+.folder{
+  color:#0969da;
+  font-weight:500;
+}
+
+.file{
+  color:#24292f;
+}
+.repolink {
+  color: black;           /* 通常時 */
+  text-decoration: none;  /* 下線を消したい場合 */
+}
+
+.repolink:visited {
+  color: black;           /* クリック後（訪問済み） */
+}
+
+.repolink:hover {
+  color: #3c64b4;           /* マウスを乗せたとき */
+}
+
+.repolink:active {
+  color: #3c64b4;           /* クリックしている瞬間 */
+}
+</style>
+</head>
+
+<body>
+
+<div class="global-header">
+  <div class="logo">Bite code</div>
+</div>
+
+<div class="repo-bar">
+  <div class="repo-path"><a href="../profile.html" class="repolink">Catmakura</a> / <a href="repository_top.html" class="repolink">trick</a></div>
+</div>
+
+<div class="breadcrumb-bar">
+  <div class="branch">main</div>
+  <div class="breadcrumb"><a href="repository_top.html" class="repolink">trick</a> / programs</div>
+</div>
+
+<div class="container">
+
+<table class="file-table">
+
+<thead>
+<tr>
+  <th class="name-col">Name</th>
+  <th class="commit-col">Last commit message</th>
+  <th class="time-col">Last commit</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+  <td class="name-col folder"><a href="repository_top.html" class="repolink">📁 ..</a></td>
+  <td class="commit-col"></td>
+  <td class="time-col"></td>
+</tr>
+
+<tr>
+  <td class="name-col file"><a href="editor.html" class="repolink">📄 containa.css</a></td>
+  <td class="commit-col">Rename programs/wallpaper/icon-main.png to programs/icon-main.png</td>
+  <td class="time-col">last week</td>
+</tr>
+  
+<tr>
+  <td class="name-col file"><a href="icon-main.png" class="repolink">📄 menubar.css</a></td>
+  <td class="commit-col">Rename programs/wallpaper/icon-main.png to programs/icon-main.png</td>
+  <td class="time-col">last week</td>
+</tr>
+
+<tr>
+  <td class="name-col file"><a href="icon-main.png" class="repolink">📄 poppop.css</a></td>
+  <td class="commit-col">Rename programs/wallpaper/icon-main.png to programs/icon-main.png</td>
+  <td class="time-col">last week</td>
+</tr>
+  
+<tr>
+  <td class="name-col file"><a href="icon-main.png" class="repolink">📄 top.css</a></td>
+  <td class="commit-col">Rename programs/wallpaper/icon-main.png to programs/icon-main.png</td>
+  <td class="time-col">last week</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</body>
+</html>
