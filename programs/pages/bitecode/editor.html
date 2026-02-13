@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>Code Viewer</title>
+<title>Code editor - Bitecode</title>
 
 <style>
 body{
@@ -148,9 +148,10 @@ const codeDisplay = document.getElementById("codeDisplay");
 const filePathDisplay = document.getElementById("filePath");
 const downloadBtn = document.getElementById("downloadBtn");
 
-/* 🔐 ホワイトリストのみ */
+/* ホワイトリスト指定 */
 const allowedFiles = [
   "index.html",
+  "README_Catmakura.md",
   "app.js",
   "style.css",
   "folder/test.js"
@@ -162,9 +163,9 @@ let currentFileName = "";
 const params = new URLSearchParams(window.location.search);
 currentFileName = params.get("file") || "sample.html";
 
-/* 🔐 ホワイトリスト判定のみ */
+/* ホワイトリスト判定 */
 if(!allowedFiles.includes(currentFileName)){
-  showError("Access denied.");
+  showError("403 - Access denied.");
 } else {
   loadFile(currentFileName);
 }
@@ -174,7 +175,7 @@ function loadFile(fileName){
 
   fetch(fileName)
     .then(res => {
-      if(!res.ok) throw new Error("File not found");
+      if(!res.ok) throw new Error("404 - File not found");
       return res.text();
     })
     .then(text => {
@@ -182,8 +183,8 @@ function loadFile(fileName){
       codeDisplay.textContent = text;
       generateLines(text);
 
-      // ✅ タイトル変更
-      document.title = fileName + " - Code Viewer";
+      // タイトル変更
+      document.title = fileName + " -Bitecode";
     })
     .catch(() => {
       showError("File not found.");
@@ -197,8 +198,8 @@ function showError(message){
   fileInfo.textContent = "";
   downloadBtn.disabled = true;
 
-  // タイトルも変更
-  document.title = "Code Viewer";
+  // タイトル変更
+  document.title = "error - Bitecode";
 }
 
 function generateLines(text){
