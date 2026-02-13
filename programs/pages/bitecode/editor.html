@@ -113,7 +113,7 @@ pre{
 <body>
 
 <div class="global-header">
-  GitHub
+  Bite code
 </div>
 
 <div class="breadcrumb" id="filePath">
@@ -184,7 +184,7 @@ function loadFile(fileName){
       generateLines(text);
 
       // タイトル変更
-      document.title = fileName + " -Bitecode";
+      document.title = fileName + " - Bite code";
     })
     .catch(() => {
       showError("File not found.");
@@ -199,7 +199,7 @@ function showError(message){
   downloadBtn.disabled = true;
 
   // タイトル変更
-  document.title = "error - Bitecode";
+  document.title = "error - Bite code";
 }
 
 function generateLines(text){
